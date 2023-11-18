@@ -1,0 +1,13 @@
+.logo{
+    font-weight: bold;
+    font-size: 40px !important;
+}
+
+.middle{
+    height: 100px;
+    display: flex;
+    align-items: center;   
+    color: white;
+    font-weight: bolder;
+    background-color: lightgray;
+}
