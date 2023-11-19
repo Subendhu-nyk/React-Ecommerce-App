@@ -111,7 +111,7 @@ const DUMMY_PRODUCTS = [
     );
   };
   
-  const AvailableProducts = () => {
+  const AvailableProducts = (props) => {   
     return (
       <section>
         <HeaderCard>

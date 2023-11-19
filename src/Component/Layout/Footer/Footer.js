@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
-import HeaderCard from '../UI/Card'
+import HeaderCard from '../../UI/Card'
 import { Navbar, NavbarBrand,Nav,Col} from 'react-bootstrap'
-import classes from './Header.module.css'
+import classes from '../Header/Header.module.css'
 // import HeaderCartButton from './HeaderCartButton'
 // import MenuBar from './MenuBar'
 

@@ -1,13 +1,13 @@
 import React from 'react'
-import HeaderCard from '../UI/Card'
-import CartButton from '../UI/Button'
+import HeaderCard from '../../UI/Card'
+import CartButton from '../../UI/Button'
 import { Col } from 'react-bootstrap'
 
-const FooterCartButton = () => {
+const FooterCartButton = (props) => {
   return (
     <HeaderCard>
         <Col md={12} className='d-flex justify-content-center my-4'>
-        <CartButton variant="warning" className='rounded-4'>See The Cart</CartButton>
+        <CartButton variant="warning" className='rounded-4' onClick={props.onShowCart}>See The Cart</CartButton>
         </Col>
     </HeaderCard>
   )

@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import HeaderCard from '../UI/Card'
+import HeaderCard from '../../UI/Card'
 import { Navbar, NavbarBrand,Nav,Col} from 'react-bootstrap'
 import classes from './Header.module.css'
 import HeaderCartButton from './HeaderCartButton'
@@ -8,6 +8,7 @@ import MenuBar from './MenuBar'
 
 
 const Header = (props) => {
+  console.log("header", props.products)
   return (
     <Fragment>
     <Navbar bg="primary" variant='dark' >
@@ -18,7 +19,7 @@ const Header = (props) => {
           <Col md={4}>
             <Nav className="mt-2 fs-5 justify-content-between">          
               <MenuBar/>
-              <HeaderCartButton/>
+              <HeaderCartButton onClick={props.onShowCart}/>
             </Nav>           
           </Col>
         </HeaderCard>
