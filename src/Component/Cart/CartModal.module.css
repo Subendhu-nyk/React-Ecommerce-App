@@ -25,6 +25,7 @@
   .header h2 {
     margin: 0;
     color: white;
+   
   }
 
   .content {
@@ -42,4 +43,23 @@
       left: calc(50% - 20rem);
       width: 40rem;
     }
+  }
+
+  .cart-items-scrollable {
+    max-height: 300px; /* Adjust the height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  h3{
+    font-size: 22px;
+    margin-left: 25px;
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin: 1rem 0;
   }

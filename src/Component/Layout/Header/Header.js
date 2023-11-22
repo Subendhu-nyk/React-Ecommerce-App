@@ -8,8 +8,7 @@ import MenuBar from './MenuBar'
 
 
 const Header = (props) => {
-  console.log("header", props.products)
-  return (
+   return (
     <Fragment>
     <Navbar bg="primary" variant='dark' >
         <HeaderCard className=" d-block">

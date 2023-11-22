@@ -1,19 +1,22 @@
-import React, { Fragment} from 'react'
+import React, { Fragment, useContext} from 'react'
 import {Badge } from 'react-bootstrap'
 import CartButton from '../../UI/Button'
-
+import CartContext from '../../../Store/CartContext'
 
 const HeaderCartButton = (props) => { 
+  const cartCtx=useContext(CartContext)
+
+  // let quantity=0;
+  // cartCtx.items.forEach(item=>{
+  //   quantity=quantity+Number(item.quantity)
+  // })
 
   return (
     <Fragment>
       
-    <CartButton variant="outline-warning" className='rounded-4' onClick={props.onClick}> Cart <Badge bg="success" className='text-white'>{0}</Badge>
+    <CartButton variant="outline-warning" className='rounded-4' onClick={props.onClick}> Cart <Badge bg="success" className='text-white'>{cartCtx.quantity}</Badge>
               <span className="visually-hidden">unread messages</span></CartButton>
-    {/* <Button variant="outline-warning" className='rounded-4'>        
-              Cart <Badge bg="success" className='text-white'>9</Badge>
-              <span className="visually-hidden">unread messages</span>
-    </Button> */}
+ 
     </Fragment>
   )
 }

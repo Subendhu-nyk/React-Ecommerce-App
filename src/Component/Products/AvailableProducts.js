@@ -7,7 +7,7 @@ import { Col } from "react-bootstrap";
 const DUMMY_PRODUCTS = [
     {  
           "id": 1,
-          "title": "Jeans",
+          "title": "Jeans Allen Solly",
           "category": "Mens",
           "category_id": 1,
           "price": 2000,
@@ -18,7 +18,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 2,
-          "title": "Men's Shirt",
+          "title": "Men's Shirt Tomy Hilfiger",
           "category": "Mens",
           "category_id": 1,
           "price": 1200,
@@ -29,7 +29,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 3,
-          "title": "Men's Shirt",
+          "title": "Men's Shirt Levi's",
           "category": "Mens",
           "category_id": 1,
           "price": 1300,
@@ -40,7 +40,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 4,
-          "title": "Jeans",
+          "title": "Jeans Levi's",
           "category": "Mens",
           "category_id": 1,
           "price": 3000,
@@ -51,7 +51,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 5,
-          "title": "Women's Jeans",
+          "title": "Women's Jeans(Lee)",
         "category": "Womens",
         "category_id": 1,
          "price": 1000,
@@ -62,7 +62,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 6,
-          "title": "Women's Jeans",
+          "title": "Women's Jeans(Levi's)",
           "category": "Womens",
           "category_id": 1,
          "price": 1600,
@@ -73,7 +73,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 7,
-          "title": "Women's Shirt",
+          "title": "Women's Shirt(Peter England)",
         "category": "Womens",
         "category_id": 1,
         "price": 1500,
@@ -84,7 +84,7 @@ const DUMMY_PRODUCTS = [
       },
       {
           "id": 8,
-          "title": "Women's Shirt",
+          "title": "Women's Shirt(Wills)",
         "category": "Womens",
         "category_id": 1,
         "price": 2000,
