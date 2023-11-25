@@ -9,7 +9,7 @@ const MenuBar = (props) => {
     <Fragment>
      <NavLink to="/" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Home</NavLink>
       <NavLink to="/Store" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Store</NavLink>
-      <NavLink to="#pricing" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Pricing</NavLink>
+      <NavLink to="/About" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>About</NavLink>
    </Fragment>
   )
 }
