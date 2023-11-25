@@ -19,10 +19,10 @@ const CartItem = (props) => {
   return (
     <li className={classes['cart-item']} >
       <HeaderCard>      
-        <Col md={10}>
+        <Col md={10} className='my-2'>
           <HeaderCard>
           <Col md={4}>
-          <img src={props.imageUrl} style={{ width: '150px', height: '100px' }}/>
+          <img src={props.imageUrl} alt='dress' style={{ width: '150px', height: '100px' }}/>
           </Col>
           <Col md={4}>
           <h5>{props.title}</h5>

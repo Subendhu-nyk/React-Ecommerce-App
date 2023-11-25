@@ -1,13 +1,16 @@
 import React, { Fragment } from 'react'
-import { NavLink } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
+import classes from './MenuBar.module.css'
+
+
 
 const MenuBar = (props) => {
   return (
     <Fragment>
-    <NavLink className="text-white" href="#home">Home</NavLink>
-    <NavLink className="text-white" href="#features">Features</NavLink>
-    <NavLink className="text-white" href="#pricing">Pricing</NavLink>
-    </Fragment>
+     <NavLink to="/" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Home</NavLink>
+      <NavLink to="/Store" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Store</NavLink>
+      <NavLink to="#pricing" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Pricing</NavLink>
+   </Fragment>
   )
 }
 
