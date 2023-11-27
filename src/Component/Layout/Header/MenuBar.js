@@ -6,11 +6,12 @@ import classes from './MenuBar.module.css'
 
 const MenuBar = (props) => {
   return (
-    <Fragment>
-     <NavLink to="/" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Home</NavLink>
-      <NavLink to="/Store" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>Store</NavLink>
-      <NavLink to="/About" className={({ isActive }) => `text-white ${isActive ? classes.active : ''}`}>About</NavLink>
-   </Fragment>
+    <header className={`${classes.header} ${classes.list}`}>
+     <NavLink exact to="/" activeClassName={`${classes.active}`}>Home</NavLink>
+      <NavLink to="/Store" activeClassName={`${classes.active}`}>Store</NavLink>
+      <NavLink to="/About" activeClassName={`${classes.active}`}>About</NavLink>
+      <NavLink to="/Contact" activeClassName={`${classes.active}`}>Contact us</NavLink>
+   </header>
   )
 }
 

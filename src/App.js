@@ -1,25 +1,31 @@
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Route } from "react-router-dom";
 import Store from "./Pages/Store";
 import Home from "./Pages/Home";
-import RootLayout from "./Pages/Root";
-import About from "./Pages/About";
 
-const router=createBrowserRouter([
-  {
-    path:'/',
-    element:<RootLayout/>,
-    children:[
-      {path:'/Store',element:<Store/>},
-      {path:'/About',element:<About/>},
-      {path:'/',element:<Home/>},
-    ],
-  },  
-])
+import About from "./Pages/About";
+import Contact from "./Pages/ContactUs";
+
 
 function App() { 
 
   return (
-    <RouterProvider router={router} />
+    <div>
+       <Route exact path="/">
+      <Home/>
+      </Route>
+      <Route path="/Store">
+      <Store/>
+      </Route>
+      <Route path="/About">
+      <About/>
+      </Route>
+      <Route path="/Contact">
+      <Contact/>
+      </Route>
+      
+     
+    </div>
+    
     );
 }
 

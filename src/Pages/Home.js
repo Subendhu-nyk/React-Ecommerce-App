@@ -1,18 +1,14 @@
-import { useState } from 'react';
-
 import Header from '../Component/Layout/Header/Header';
-import CarouselSlider from '../Component/Carousel/Carousel';
-import AvailableProducts from '../Component/Products/AvailableProducts';
 import Footer from '../Component/Layout/Footer/Footer';
 import CartProvider from '../Store/CartProvider';
+import HomeBody from '../Component/Layout/HomeBody/HomeBody';
 
 function Home() {  
 
   return (
     <CartProvider>      
       <Header/> 
-      <CarouselSlider/>
-      <AvailableProducts/>       
+      <HomeBody/>            
       <Footer/>
     </CartProvider>    
     );

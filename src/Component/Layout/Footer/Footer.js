@@ -12,7 +12,7 @@ const Footer = (props) => {
     <Fragment>
     <Navbar className='py-5' bg="primary" variant='dark' >
         <HeaderCard className=" d-block">
-          <Col  md={8}>
+          <Col  md={8} className='mx-5'>
             <NavbarBrand href="#" className={classes.logo}>BestBuy</NavbarBrand>
           </Col>
           <Col md={4}>
