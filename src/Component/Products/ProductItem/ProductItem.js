@@ -30,7 +30,7 @@ const CardItem=(props)=> {
           <Card.Title className="text-center pb-2">{props.title}</Card.Title>          
           <CardImage src={props.imageUrl} alt={props.title}/>
           <div className="d-flex justify-content-around pt-3">        
-          <Card.Link className="text-decoration-none text-dark">{price}</Card.Link>
+          <span className="text-decoration-none text-dark">{price}</span>
           <Button variant="warning" onClick={addItemToCart}>Add to Cart</Button>
           </div>  
         </Card.Body>

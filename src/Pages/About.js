@@ -10,22 +10,22 @@ function About() {
     <CartProvider>      
       <Header/> 
     <HeaderCard>
-        <Col md={12} className='text-center my-3'><h1>About us</h1></Col>
+        <Col md={12} className='text-center my-3'style={{ fontFamily: "'Playfair Display', serif"}}><h1>About us</h1></Col>
         <Col md={5}>
         <img src={img1} alt='cart' className='px-3 py-2' style={{width:'100%'}}/>
         </Col>
         <Col md={7}>
-        <p style={{fontSize:'16px'}}>
+        <p style={{fontSize:'20px',fontFamily: "'Crimson Text', serif"}}>
 
-<b>BestBuy Group: Revolutionizing Fashion Retail with a Digital Touch </b> <br/><br/>
+<b>BestBuy Group: Revolutionizing Fashion Retail with a Digital Touch </b> <br/>
 
-BestBuy Group stands as a prominent figure in the global digital retail landscape, encompassing a family of brands including BestBuy, StylePlus, BestBuy Wholesale, BestBuy FashionTech, and TrendJourney. The Group also holds a significant stake in PayFashion, a leading digital payment solution in the fashion industry.<br/><br/>
+BestBuy Group stands as a prominent figure in the global digital retail landscape, encompassing a family of brands including BestBuy, StylePlus, BestBuy Wholesale, BestBuy FashionTech, and TrendJourney. The Group also holds a significant stake in PayFashion, a leading digital payment solution in the fashion industry.<br/>
 
 Founded in 2022, BestBuy has been at the forefront of the fashion retail revolution, bringing together a diverse range of consumers, designers, artisans, and small businesses into the fold of digital commerce. With a customer base exceeding 300 million globally, BestBuy offers an extensive array of clothing accessories and fashion products, featuring over 100 million items across more than 50 specialized categories. Our mission to democratize fashion retail globally drives our efforts to enhance accessibility, affordability, and customer satisfaction, while creating thousands of jobs and empowering a new generation of fashion entrepreneurs and small-scale enterprises.<br/><br/>
 
 BestBuy is renowned for introducing groundbreaking services like Virtual Try-On, Fashion Forward Financing, and Hassle-Free Returns. These customer-focused innovations have not only made fashion more accessible but have also redefined the shopping experience for millions worldwide. Alongside its group companies, BestBuy is dedicated to transforming the fashion retail industry through cutting-edge technology.<br/><br/>
 
-For more information on BestBuy's advertising opportunities, please contact us at fashionfusion@bestbuy.com.<br/><br/>
+For more information on BestBuy's advertising opportunities, please contact us at fashionfusion@bestbuy.com.<br/>
 
 Discover more about our advertising experiences at brands.bestbuy.com.<br/></p>
         </Col>

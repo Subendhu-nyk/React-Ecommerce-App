@@ -17,7 +17,7 @@ const Header = (props) => {
     <Navbar bg="primary" variant='dark' >
         <HeaderCard className="d-block">
           <Col  md={3} className='mx-5'>
-            <NavbarBrand href="#" className={classes.logo}>BestBuy</NavbarBrand>
+            <NavbarBrand href="#" className={classes.logo} style={{ color:'yellow', fontFamily: "'Playfair Display', serif"}}>BestBuy</NavbarBrand>
           </Col>
           <Col md={8}>
             <Nav className="mt-2 fs-5"> 

@@ -2,6 +2,7 @@ import React from "react";
 import CardItem from "./ProductItem/ProductItem";
 import HeaderCard from "../UI/Card";
 import { Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const DUMMY_PRODUCTS = [
@@ -103,9 +104,13 @@ const DUMMY_PRODUCTS = [
     return (
       <>
         {products.map(product => (
+          
           <Col key={product.id} md={3} className="d-flex justify-content-center my-3">
+           <Link to={`/products/${product.id}`} style={{ textDecoration: 'none' }}>
             <CardItem id={product.id} title={product.title} imageUrl={product.imageUrl} price={product.price} />
+            </Link>
           </Col>
+          
         ))}
       </>
     );

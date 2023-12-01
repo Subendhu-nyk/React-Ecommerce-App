@@ -13,7 +13,7 @@ const Footer = (props) => {
     <Navbar className='py-5' bg="primary" variant='dark' >
         <HeaderCard className=" d-block">
           <Col  md={8} className='mx-5'>
-            <NavbarBrand href="#" className={classes.logo}>BestBuy</NavbarBrand>
+            <NavbarBrand href="#" className={classes.logo} style={{color:'yellow', fontFamily: "'Playfair Display', serif"}}>BestBuy</NavbarBrand>
           </Col>
           <Col md={4}>
             <Nav className="mt-2 fs-5 justify-content-between">          

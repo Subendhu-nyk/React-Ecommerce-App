@@ -55,7 +55,7 @@ const onSubmitHandler =async(event)=>{
           <img
             src={contactImg}
             alt="contact png"
-            className="px-3 py-2"
+            className="mx-auto px-3 py-2"
             style={{ width: "100%" }}
           />
         </Col>
@@ -63,10 +63,10 @@ const onSubmitHandler =async(event)=>{
         <Col md={7}>
         <Container>
             <Row className="d-flex justify-content-center my-3">
-        <Col md={12} className="text-center mb-2">
+        <Col md={12} className="text-center mb-2" style={{ fontFamily: "'Playfair Display', serif"}}>
           <h1>Contact us</h1>
         </Col>        
-        <Col md={6} className="border rounded-3 border-primary p-3">
+        <Col md={6} className="border rounded-3 border-4 border-primary p-3">
           <Form className="my-2 py-1" onSubmit={onSubmitHandler}>
             <Form.Group className="mb-3" controlId="name">
               <Form.Label>Name:</Form.Label>

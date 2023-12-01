@@ -21,7 +21,7 @@ function HomeBody() {
             <Col md={5}>
                 <HeaderCard className='py-5' style={{ marginTop:"90px"}}>
                     <Col md={12} className='mt-5 ms-5 pt-5 ps-4 mb-3 text-primary' style={{ fontFamily: "'Playfair Display', serif"}}><h1>Shop our latest clothing,accessories & more!</h1></Col>
-                    <Col md={12} className='ms-5 ps-4 mb-3'><p>Explore wht our stores has to offer! We have a wide range of different accessories and merchandise available for purchase</p></Col>
+                    <Col md={12} className='ms-5 ps-4 mb-3' style={{fontSize:'20px',fontFamily: "'Crimson Text', serif"}}><p>Explore wht our stores has to offer! We have a wide range of different accessories and merchandise available for purchase</p></Col>
                     <Col md={12} className='ms-5 ps-4 mb-3'>
                     <CartButton type='Button' onClick={navigateToStore}>Shop Now!</CartButton>
                     </Col>                    
