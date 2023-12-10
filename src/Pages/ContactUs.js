@@ -4,12 +4,13 @@ import CartProvider from "../Store/CartProvider";
 import HeaderCard from "../Component/UI/Card";
 import { Col, Form, Button, Container,Row } from "react-bootstrap";
 import contactImg from "../Assets/contact.jpg";
-import { useState } from "react";
+import { useState,useEffect, Fragment } from "react";
 
 function Contact(props) {
   const [name,setName]=useState('')
   const [contact,setContact]=useState('')
   const [email,setEmail]=useState('')
+  const [count,setCount]=useState('')
 
 const nameHandler=(event)=>{
   const nameRef=event.target.value
@@ -43,13 +44,29 @@ const onSubmitHandler =async(event)=>{
       }
     })
     const data=await response.json()
+    setCount(count+1)
     console.log(data)
 }
+const fetchData = async () => {
+  try {
+    const response = await fetch('https://react-http-6e598-default-rtdb.firebaseio.com/contactDetails.json');
+    const data = await response.json();    
+    setCount(Object.keys(data).length)
+   
+    // You can do something with the fetched data here
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+};
+console.log("count",count);
+// useEffect to call fetchData when the component mounts
+useEffect(() => {
+  fetchData();
+}, []);
 
 
   return (
-    <CartProvider>
-      <Header />
+         <Fragment>
       <HeaderCard>        
         <Col md={5}>
           <img
@@ -96,7 +113,7 @@ const onSubmitHandler =async(event)=>{
         </Col>
       </HeaderCard>
       <Footer />
-    </CartProvider>
+      </Fragment>
   );
 }
 

@@ -1,0 +1,31 @@
+/*===pic-Zoom===*/
+.boxzoom .zoomthumb {
+    width: 90px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0px;
+}
+.boxzoom .zoomthumb ul.piclist {
+    padding-left: 0px;
+    top: 0px;
+}
+.boxzoom .productimages {
+    width: 60%;
+    height: 550px;
+    margin: 20px 20px;
+    border: 3px solid black;
+    display: inline-block;
+}
+.boxzoom .productimages .picZoomer {
+    width: 100%;
+}
+.boxzoom .productimages .picZoomer .picZoomerpicwp img {
+    left: 0px;
+}
+.boxzoom .productimages .picZoomer img.myimg {
+    width: 100%;
+}
+.piclist li img {
+    height:100px;
+    object-fit:cover;
+}

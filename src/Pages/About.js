@@ -4,11 +4,12 @@ import CartProvider from '../Store/CartProvider';
 import HeaderCard from '../Component/UI/Card';
 import { Col } from 'react-bootstrap';
 import img1 from '../Assets/cart.jpg'
+import { Fragment } from 'react';
 
 function About() {  
   return (
-    <CartProvider>      
-      <Header/> 
+   <Fragment>  
+      
     <HeaderCard>
         <Col md={12} className='text-center my-3'style={{ fontFamily: "'Playfair Display', serif"}}><h1>About us</h1></Col>
         <Col md={5}>
@@ -31,7 +32,7 @@ Discover more about our advertising experiences at brands.bestbuy.com.<br/></p>
         </Col>
     </HeaderCard>            
       <Footer/>
-    </CartProvider>    
+      </Fragment>     
     );
 }
 

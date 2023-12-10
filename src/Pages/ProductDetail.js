@@ -1,16 +1,31 @@
-import React from 'react'
-import { useParams,Route } from 'react-router-dom'
+import React,{useContext, useState} from 'react'
+import { useParams } from 'react-router-dom'
+import Footer from '../Component/Layout/Footer/Footer';
+import Product from './Product';
+import CartContext from '../Store/CartContext';
+
+
 
 const ProductDetail = (props) => {
+  const cartCtx=useContext(CartContext)
+  const [cartIsShown,setCartIsShown]=useState(false)  
+
+  const showCartHandler=()=>{
+    setCartIsShown(true)
+  }
+  const hideCartHandler=()=>{
+    setCartIsShown(false)
+  }
   const params=useParams();  
-  console.log(params.productId)
+  
   return (
     <section> 
-        <h1>Product Detail</h1>
-        <p>{params.productId}</p>
-        <Route path='/products/:productId/new-user'>
-        <h2>shirts</h2>
-        </Route>
+        
+        {/* {cartIsShown && <Cart onClose={hideCartHandler}/>}
+        <Header onShowCart={showCartHandler}/> */}
+        <Product onShowCart={showCartHandler}/>
+        <Footer/>       
+      
     </section>
   )
 }

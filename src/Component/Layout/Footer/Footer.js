@@ -10,7 +10,7 @@ import classes from '../Header/Header.module.css'
 const Footer = (props) => {
   return (
     <Fragment>
-    <Navbar className='py-5' bg="primary" variant='dark' >
+    <Navbar className='py-5 mt-5' bg="primary" variant='dark'  >
         <HeaderCard className=" d-block">
           <Col  md={8} className='mx-5'>
             <NavbarBrand href="#" className={classes.logo} style={{color:'yellow', fontFamily: "'Playfair Display', serif"}}>BestBuy</NavbarBrand>

@@ -1,14 +1,13 @@
-import { useState } from 'react';
-
-import Header from '../Component/Layout/Header/Header';
+import { Fragment, useState } from 'react';
 import CarouselSlider from '../Component/Carousel/Carousel';
 import AvailableProducts from '../Component/Products/AvailableProducts';
 import Footer from '../Component/Layout/Footer/Footer';
 import FooterCartButton from '../Component/Layout/Footer/FooterCartButton';
-import Cart from '../Component/Cart/Cart';
-import CartProvider from '../Store/CartProvider';
 
-function Store() {
+
+
+function Store(props) {
+  console.log("Store props",props)
   const [cartIsShown,setCartIsShown]=useState(false)
 
   const showCartHandler=()=>{
@@ -19,14 +18,15 @@ function Store() {
   }
 
   return (
-    <CartProvider>
-      {cartIsShown && <Cart onClose={hideCartHandler}/>}
-      <Header onShowCart={showCartHandler}/> 
+      <Fragment>
+      {/* {cartIsShown && <Cart onClose={hideCartHandler}/>}
+      <Header onShowCart={showCartHandler}/>  */}
       <CarouselSlider/>
-      <AvailableProducts/> 
+      <AvailableProducts DUMMY_PRODUCTS={props.DUMMY_PRODUCTS}/> 
       <FooterCartButton onShowCart={showCartHandler}/>
       <Footer/>
-    </CartProvider>    
+      </Fragment>
+       
     );
 }
 

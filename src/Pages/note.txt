@@ -1,0 +1,9 @@
+Without Optional Chaining (location.state.product):
+
+This approach assumes that location.state is always defined and has a product property.
+If location.state is undefined (for example, if the user navigates directly to the page without passing state through a Link), trying to access location.state.product will result in a TypeError (Cannot read property 'product' of undefined).
+With Optional Chaining (location.state?.product):
+
+This approach is safer. It checks if location.state is defined before trying to access the product property.
+If location.state is undefined, it will not attempt to access product and will return undefined instead of throwing an error.
+This is particularly useful in scenarios where location.state might not always be provided, such as when a user navigates directly to a URL or refreshes the page.

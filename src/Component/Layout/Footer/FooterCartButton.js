@@ -6,7 +6,7 @@ import { Col } from 'react-bootstrap'
 const FooterCartButton = (props) => {
   return (
     <HeaderCard>
-        <Col md={12} className='d-flex justify-content-center my-4'>
+        <Col md={12} className='d-flex justify-content-center'>
         <CartButton variant="warning" className='rounded-4' onClick={props.onShowCart}>See The Cart</CartButton>
         </Col>
     </HeaderCard>

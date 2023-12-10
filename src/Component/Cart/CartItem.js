@@ -6,9 +6,9 @@ import HeaderCard from '../UI/Card';
 import { Col } from 'react-bootstrap';
 
 
-const CartItem = (props) => {
- const cartCtx=useContext(CartContext)  
-    
+const CartItem = (props) => { 
+  
+ const cartCtx=useContext(CartContext)    
     
 
   const onRemoveHandler=()=>{    
@@ -19,10 +19,10 @@ const CartItem = (props) => {
   return (
     <li className={classes['cart-item']} >
       <HeaderCard>      
-        <Col md={10} className='my-2'>
+        <Col md={9} className='my-2'>
           <HeaderCard>
           <Col md={4}>
-          <img src={props.imageUrl} alt='dress' style={{ width: '150px', height: '100px' }}/>
+          <img src={props.imageUrl} alt='dress' style={{ width: '100px', height: '100px' }}/>
           </Col>
           <Col md={4}>
           <h5>{props.title}</h5>
@@ -36,7 +36,7 @@ const CartItem = (props) => {
           </HeaderCard>        
         </Col>
         <Col md={2}>        
-      <CartButton onClick={onRemoveHandler} variant="outline-danger" type='submit' className="me-4">Remove</CartButton>
+      <CartButton onClick={onRemoveHandler} variant="outline-danger" type='submit' className="">Remove</CartButton>
         </Col>
       </HeaderCard>
       
