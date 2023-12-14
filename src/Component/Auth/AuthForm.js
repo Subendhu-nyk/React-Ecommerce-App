@@ -1,10 +1,13 @@
-import { useState, useRef } from "react";
-
+import { useState, useRef,useContext } from "react";
 import classes from "./AuthForm.module.css";
+import CartContext from "../../Store/CartContext";
+import { useHistory } from "react-router-dom";
 
 const AuthForm = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
+  const authCtx=useContext(CartContext)
+  const history=useHistory()
 
   const [isLogin, setIsLogin] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
@@ -54,7 +57,8 @@ const AuthForm = () => {
       }
     }).then(data=>{
       console.log(data)
-      localStorage.setItem('ReactToken',data.idToken)
+      authCtx.login(data.idToken);
+      history.replace('/Store')
     })
     .catch((err)=>{
       alert(err.message)

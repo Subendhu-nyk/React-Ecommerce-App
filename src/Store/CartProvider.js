@@ -4,7 +4,20 @@ import CartContext from './CartContext'
 const CartProvider = (props) => {
     const [items,updateItems]=useState([])    
     const [quantity,setQuantity]=useState(0)
-    console.log("cart provider",items)
+    const initialToken=localStorage.getItem('ecomAuthToken')
+    const [token, setToken] = useState(initialToken);
+    const userIsLoggedIn = !!token;
+
+    const loginHandler = (token) => {
+      setToken(token);
+      localStorage.setItem('ecomAuthToken',token)
+    };
+  
+    const logoutHandler = () => {
+      setToken(null);
+      localStorage.removeItem('ecomAuthToken')
+    };
+    
     
     const addItemToCartHandler=item=>{
         updateItems([...items,item])  
@@ -27,7 +40,11 @@ const CartProvider = (props) => {
     totalAmount:0,
     quantity:quantity,  
     addItem:addItemToCartHandler,
-    removeItem:removeItemFromHandler
+    removeItem:removeItemFromHandler,
+    token: token,
+    isLoggedIn: userIsLoggedIn,
+    login: loginHandler,
+    logout: logoutHandler,
     }
   
     return (
