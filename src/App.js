@@ -104,6 +104,7 @@ const DUMMY_PRODUCTS = [
 
 function App() { 
   const cartCtx=useContext(CartContext)
+  const isLoggedIn=cartCtx.isLoggedIn;
   console.log("in App cartctx",cartCtx)
   const [cartIsShown,setCartIsShown]=useState(false)
   
@@ -126,7 +127,7 @@ function App() {
       <Home/>
       </Route>
       <Route path="/Store">
-      <Store DUMMY_PRODUCTS={DUMMY_PRODUCTS} />
+      {isLoggedIn? <Store DUMMY_PRODUCTS={DUMMY_PRODUCTS} />:<Auth/>}
       </Route>
       <Route path="/About">
       <About/>

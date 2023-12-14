@@ -1,15 +1,15 @@
 import React, { useContext } from 'react'
-import { NavLink ,useHistory } from 'react-router-dom'
+import { NavLink  } from 'react-router-dom'
 import classes from './MenuBar.module.css'
 import CartContext from '../../../Store/CartContext'
-import { Button } from 'react-bootstrap'
+
 
 
 
 
 
 const MenuBar = (props) => {
-  const history=useHistory();
+  
   const authCtx=useContext(CartContext)  
   const isLoggedIn=authCtx.isLoggedIn;
 
