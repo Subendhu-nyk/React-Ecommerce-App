@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { NavLink } from 'react-router-dom'
 import classes from './MenuBar.module.css'
 
@@ -10,6 +10,7 @@ const MenuBar = (props) => {
      <NavLink exact to="/" activeClassName={`${classes.active}`}>Home</NavLink>
       <NavLink to="/Store" activeClassName={`${classes.active}`}>Store</NavLink>
       <NavLink to="/About" activeClassName={`${classes.active}`}>About</NavLink>
+      <NavLink to="/Login" activeClassName={`${classes.active}`}>Login</NavLink>
       <NavLink to="/Contact" activeClassName={`${classes.active}`}>Contact us</NavLink>
    </header>
   )

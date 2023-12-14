@@ -8,6 +8,7 @@ import ProductDetail from "./Pages/ProductDetail";
 import Header from "./Component/Layout/Header/Header";
 import Cart from "./Component/Cart/Cart";
 import CartContext from "./Store/CartContext";
+import Auth from "./Pages/Auth";
 
 const DUMMY_PRODUCTS = [
   {  
@@ -129,6 +130,9 @@ function App() {
       </Route>
       <Route path="/About">
       <About/>
+      </Route>
+      <Route path="/Login">
+      <Auth/>
       </Route>
       <Route path="/Contact">
       <Contact/>
