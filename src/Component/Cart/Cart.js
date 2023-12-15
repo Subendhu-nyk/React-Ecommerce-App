@@ -51,9 +51,10 @@ return(
             
         <Col className={classes.content}>         
         {cartItems}
-        <div className={classes.total}>        
+        <hr/>
+        <div className={classes.total}>                
         <span>Total Amount</span>
-        <span>{total}</span>
+        <span>₹{total}</span>
         </div>
         </Col>
         <footer className={classes.actions}>

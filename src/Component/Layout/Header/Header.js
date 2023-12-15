@@ -43,7 +43,7 @@ const Header = (props) => {
               </Col>
               <Col md={5} className='d-flex justify-content-center'>
               {isLoggedIn && (<Button onClick={logoutHandler} variant='warning'>Logout</Button>)}
-              {(isProductPage||isStorePage) && (
+              {(isProductPage||isStorePage) && isLoggedIn &&  (
                   <Col md={4} className='d-flex justify-content-center'>
                     <HeaderCartButton  onClick={props.onShowCart} />
                   </Col>
