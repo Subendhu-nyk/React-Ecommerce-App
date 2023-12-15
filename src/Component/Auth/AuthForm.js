@@ -20,14 +20,17 @@ const AuthForm = () => {
     event.preventDefault();
     const enteredEmail = emailInputRef.current.value;
     const enteredPassword = passwordInputRef.current.value;
+    const token=localStorage.getItem('ecomAuthToken')
     setIsLoading(true);
     let url;
     if (isLogin) {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDYPP5lWxLw7WQ5nQ8RhTmxH7JiBv7HDKk";
+      // url =
+      //   "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyDYPP5lWxLw7WQ5nQ8RhTmxH7JiBv7HDKk";
+      url='http://localhost:5000/user/login'
     } else {
-      url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDYPP5lWxLw7WQ5nQ8RhTmxH7JiBv7HDKk";
+      // url =
+      //   "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDYPP5lWxLw7WQ5nQ8RhTmxH7JiBv7HDKk";
+      url='http://localhost:5000/user/signup'
     }
     fetch(url, {
       method: "POST",
@@ -38,10 +41,12 @@ const AuthForm = () => {
       }),
       headers: {
         "Content-Type": "application/json",
+        "Authorization":token
       },
     }).then((res) => {
       setIsLoading(false);
       if (res.ok) {
+        console.log("res",res)
         return res.json();
       } 
       else
@@ -56,8 +61,8 @@ const AuthForm = () => {
         });
       }
     }).then(data=>{
-      console.log(data)
-      authCtx.login(data.idToken);
+      console.log("data",data,"data.token",data.token)
+      authCtx.login(data.token);
       history.replace('/Store')
     })
     .catch((err)=>{

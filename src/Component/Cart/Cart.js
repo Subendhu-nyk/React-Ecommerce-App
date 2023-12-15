@@ -1,4 +1,4 @@
-import React, { useContext,useState } from "react";
+import React, { useContext,useState,useEffect } from "react";
 import HeaderCard from "../UI/Card";
 import CartButton from "../UI/Button";
 import classes from './CartModal.module.css'
@@ -15,10 +15,10 @@ const Cart=props=>{
   }
   
   const [total,setTotal]=useState(0)
-  // useEffect(() => {
-  //   const newTotal = cartCtx.items.reduce((acc, item) => acc + item.price, 0);
-  //   setTotal(newTotal);
-  // }, [cartCtx.items]);
+  useEffect(() => {
+    const newTotal = cartCtx.items.reduce((acc, item) => acc + item.price, 0);
+    setTotal(newTotal);
+  }, [cartCtx.items]);
 
 
  

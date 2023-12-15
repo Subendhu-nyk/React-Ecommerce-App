@@ -16,9 +16,9 @@ const CardItem=(props)=> {
     const itemExists = cartCtx.items.some(item => item.title === props.title);
 
     if (!itemExists) {
-      // Item not in cart, add the item
-      
+      // Item not in cart, add the item      
       cartCtx.addItem(props);
+      
     } else {
       // Item already in cart, show alert message
       alert('This item is already added to the cart');
